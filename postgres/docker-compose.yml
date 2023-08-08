@@ -6,6 +6,8 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
       - '.:/app'
+    ports:
+      - '5432:5432'
     environment:
       POSTGRES_DB: agent_zone
       POSTGRES_PASSWORD: postgres
